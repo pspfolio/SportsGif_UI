@@ -12,7 +12,10 @@
         <script src="./src/js/ctrl/gifsCtrl.js"></script>
         <script src="./src/js/services/GifFactory.js"></script>
     </head>
-    <body ng-controller="gifsCtrl as gifs">
-
+    <body ng-controller="gifsCtrl as vm">
+        <h1>Gifs</h1>
+        <div ng-repeat="gif in vm.gifs">
+            <p>{{gif.title}}</p>
+        </div>
     </body>
 </html>
