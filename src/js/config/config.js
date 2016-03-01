@@ -1,6 +1,20 @@
 (function(){
 
-    function Configz($sceDelegateProvider) {
+    function Configz($routeProvider, $sceDelegateProvider) {
+
+        $routeProvider
+        .when('/', {
+            templateUrl: 'src/partials/frontpage.html',
+            controller: 'gifsCtrl',
+            controllerAs: 'vm'
+        })
+        .when('/nba', {
+            templateUrl: '../../partials/gifs-nba.html',
+            controller: '../ctrl/gifsCtrl',
+            controllerAs: 'vm'
+        })
+        .otherwise({ redirectTo: '/' });
+
         $sceDelegateProvider.resourceUrlWhitelist([
             'self',
             'https://streamable.com/**'
