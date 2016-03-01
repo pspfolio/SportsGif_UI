@@ -2,8 +2,10 @@
 <html ng-app="app">
     <head>
         <meta charset="utf-8">
-        <title></title>
+        <title>Gifs</title>
         <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link href="./src/styles/lib/toast.css" rel="stylesheet" />
+        <link href="./src/styles/style.css" rel="stylesheet" />
 
         <script src="./bower_components/jquery/dist/jquery.min.js"></script>
         <script src="./bower_components/angular/angular.min.js"></script>
@@ -11,11 +13,17 @@
         <script src="./src/js/app.js"></script>
         <script src="./src/js/ctrl/gifsCtrl.js"></script>
         <script src="./src/js/services/GifFactory.js"></script>
+        <script src="./src/js/config/config.js"></script>
     </head>
     <body ng-controller="gifsCtrl as vm">
         <h1>Gifs</h1>
-        <div ng-repeat="gif in vm.gifs">
-            <p>{{gif.title}}</p>
+        <div class="grid__col grid__col--1-of-3">
+            <div ng-repeat="gif in vm.gifs">
+                <p ng-click="vm.setGif(gif.url)">{{gif.title}}</p>
+            </div>
+        </div>
+        <div class="grid__col grid__col--2-of-3">
+            <iframe src="{{vm.selectedGif}}" scrolling="no" ng-show="vm.selectedGif.length > 0" height="800px" width="100%"></iframe>
         </div>
     </body>
 </html>
