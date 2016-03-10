@@ -4,6 +4,6 @@
         <p ng-click="vm.setGif(gif.url)">{{gif.title}}</p>
     </div>
 </div>
-<div class="grid__col grid__col--2-of-3">
-    <iframe src="{{vm.selectedGif}}" scrolling="no" ng-show="vm.selectedGif.length > 0" height="800px" width="100%"></iframe>
+<div class="grid__col grid__col--2-of-3 gif-iframe">
+    <iframe src="{{vm.selectedGif}}" scrolling="no" ng-show="vm.selectedGif.length > 0"></iframe>
 </div>
