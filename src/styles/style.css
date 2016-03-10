@@ -18,6 +18,10 @@ iframe {
     color: rgba(0,0,0,.8);
     padding: 20px 0px;
     cursor: pointer;
+    -webkit-transition: color .3s ease-in;
+    -moz-transition: color .3s ease-in;
+    -o-transition: color .3s ease-in;
+    transition: color .3s ease-in;
 }
 
 .gif-link:before {
@@ -28,4 +32,8 @@ iframe {
     background-color: rgba(0, 0, 0, .1);
     left: 0;
     top: -10px;
+}
+
+.gif-link:hover {
+    color: #ED174C;
 }
