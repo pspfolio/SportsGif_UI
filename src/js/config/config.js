@@ -17,7 +17,14 @@
 
         $sceDelegateProvider.resourceUrlWhitelist([
             'self',
-            'https://streamable.com/**'
+            'http://streamable.com/**',
+            'https://streamable.com/**',
+            'http://www.streamable.com/**',
+            'https://www.streamable.com/**',
+            'http://gfycat.com/**',
+            'https://gfycat.com/**',
+            'http://www.gfycat.com/**',
+            'https://www.gfycat.com/**'
         ]);
     };
 
