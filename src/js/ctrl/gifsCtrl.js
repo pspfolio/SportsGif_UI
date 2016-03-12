@@ -4,10 +4,11 @@
         var vm = this;
 
     	vm.gifs = GifFactory.gifs;
-        vm.selectedGif = "";
+        vm.selectedGif = {};
 
-        vm.setGif = function(value) {
-            vm.selectedGif = value;
+        vm.setGif = function(gif) {
+            console.log(gif);
+            vm.selectedGif = gif;
         };
 
         GifFactory.getGifs().then(function() {

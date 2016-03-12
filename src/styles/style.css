@@ -5,11 +5,25 @@ body {
 iframe {
     border: none;
     height: 800px;
-    width: 80%;
+    width: 100%;
+}
+
+.gif-list {
+    list-style: none;
+    padding-left: 0;
 }
 
 .gif-iframe {
     position: fixed;
+}
+
+.gif-content {
+    width: 80%;
+}
+
+.gif-title {
+    font-weight: 300;
+    font-size: 1.6em;
 }
 
 .gif-link {
@@ -18,10 +32,10 @@ iframe {
     color: rgba(0,0,0,.8);
     padding: 20px 0px;
     cursor: pointer;
-    -webkit-transition: color .3s ease-in;
-    -moz-transition: color .3s ease-in;
-    -o-transition: color .3s ease-in;
-    transition: color .3s ease-in;
+    -webkit-transition: all .3s ease-in;
+    -moz-transition: all .3s ease-in;
+    -o-transition: all .3s ease-in;
+    transition: all .3s ease-in;
 }
 
 .gif-link:before {
@@ -34,6 +48,12 @@ iframe {
     top: -10px;
 }
 
+.gif-active {
+    color: #CE1141;
+    font-size: 1.11em;
+}
+
 .gif-link:hover {
     color: #CE1141;
+    font-size: 1.11em;
 }
