@@ -48,6 +48,14 @@ iframe {
     top: -10px;
 }
 
+.gif-link .gif-link-added {
+    position: absolute;
+    right: 0;
+    top: 0;
+    font-size: 0.7em;
+    color: rgba(0,0,0,.4);
+}
+
 .gif-active {
     color: #CE1141;
     font-size: 1.11em;
