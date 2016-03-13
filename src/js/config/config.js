@@ -9,7 +9,7 @@
             controllerAs: 'vm'
         })
         .when('/sport/:subCategory', {
-            templateUrl: 'src/partials/gifs-nba.html',
+            templateUrl: 'src/partials/gif-list.html',
             controller: 'gifsCtrl',
             controllerAs: 'vm'
         })
