@@ -1,8 +1,8 @@
 (function(){
 
-    function GifsCtrl(GifFactory) {
+    function GifsCtrl(GifFactory, $routeParams) {
         var vm = this;
-
+        var subCategory = $routeParams.subCategory || '';
     	vm.gifs = GifFactory.gifs;
         vm.selectedGif = {};
 
