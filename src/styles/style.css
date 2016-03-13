@@ -1,3 +1,67 @@
+body {
+    font-family: 'Roboto', sans-serif;
+}
+
 iframe {
     border: none;
+    height: 800px;
+    width: 100%;
+}
+
+.gif-list {
+    list-style: none;
+    padding-left: 0;
+}
+
+.gif-iframe {
+    position: fixed;
+}
+
+.gif-content {
+    width: 80%;
+}
+
+.gif-title {
+    font-weight: 300;
+    font-size: 1.6em;
+}
+
+.gif-link {
+    position: relative;
+    font-size: 1.1em;
+    color: rgba(0,0,0,.8);
+    padding: 20px 0px;
+    cursor: pointer;
+    -webkit-transition: all .3s ease-in;
+    -moz-transition: all .3s ease-in;
+    -o-transition: all .3s ease-in;
+    transition: all .3s ease-in;
+}
+
+.gif-link:before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 1px;
+    background-color: rgba(0, 0, 0, .1);
+    left: 0;
+    top: -10px;
+}
+
+.gif-link .gif-link-added {
+    position: absolute;
+    right: 0;
+    top: 0;
+    font-size: 0.7em;
+    color: rgba(0,0,0,.4);
+}
+
+.gif-active {
+    color: #CE1141;
+    font-size: 1.11em;
+}
+
+.gif-link:hover {
+    color: #CE1141;
+    font-size: 1.11em;
 }
