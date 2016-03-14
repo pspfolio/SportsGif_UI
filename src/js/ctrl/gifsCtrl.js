@@ -1,8 +1,8 @@
 (function(){
 
-    function GifsCtrl(GifFactory) {
+    function GifsCtrl(GifFactory, $routeParams) {
         var vm = this;
-
+        vm.subCategory = $routeParams.subCategory || '';
     	vm.gifs = GifFactory.gifs;
         vm.selectedGif = {};
 
@@ -10,7 +10,7 @@
             vm.selectedGif = gif;
         };
 
-        GifFactory.getGifs().then(function() {
+        GifFactory.getGifs(vm.subCategory).then(function() {
             vm.gifs = GifFactory.gifs;
         });
     };
