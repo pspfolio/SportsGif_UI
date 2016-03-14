@@ -1,19 +1,23 @@
+(function(){
+
+function ctrl() {
+    this.navs = [];
+    this.addNav = function(nav) {
+        this.navs.push(nav);
+    }
+}
+
 function navs() {
     return {
         restrict: 'E',
         scope: {},
         transclude: true,
-        controller: function() {
-            this.navs = [];
-        },
+        controller: ctrl,
         controllerAs: 'navs',
-        template: `
-        <nav>
-            <ul>
-                <li>Test</li>
-            </ul>
-        </nav>`
+        templateUrl: 'src/components/navigation/navs/navs.html'
     };
 }
 
-angular.module('app', []).directive('navs', navs);
+angular.module('app').directive('navs', navs);
+
+})();
