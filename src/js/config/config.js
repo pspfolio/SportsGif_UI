@@ -8,9 +8,9 @@
             controller: 'gifsCtrl',
             controllerAs: 'vm'
         })
-        .when('/nba', {
-            templateUrl: '../../partials/gifs-nba.html',
-            controller: '../ctrl/gifsCtrl',
+        .when('/sport/:subCategory', {
+            templateUrl: 'src/partials/gif-list.html',
+            controller: 'gifsCtrl',
             controllerAs: 'vm'
         })
         .otherwise({ redirectTo: '/' });
