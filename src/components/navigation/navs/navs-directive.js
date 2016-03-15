@@ -12,6 +12,10 @@ function ctrl() {
     }
 }
 
+function link($scope) {
+    
+}
+
 function navs() {
     return {
         restrict: 'E',
@@ -19,7 +23,8 @@ function navs() {
         transclude: true,
         controller: ctrl,
         controllerAs: 'vm',
-        templateUrl: 'src/components/navigation/navs/navs.html'
+        templateUrl: 'src/components/navigation/navs/navs.html',
+        link: link
     };
 }
 
