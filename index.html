@@ -16,16 +16,17 @@
         <script src="./src/js/ctrl/gifsCtrl.js"></script>
         <script src="./src/js/services/GifFactory.js"></script>
         <script src="./src/js/config/config.js"></script>
-                <script src="./src/components/navigation/nav/navo-directive.js"></script>
         <script src="./src/components/navigation/navs/navs-directive.js"></script>
+        <script src="./src/components/navigation/nav/nav-item-directive.js"></script>
+
 
 
     </head>
     <body>
         <div class="grid__col grid__col--1-of-12">
             <navs>
-                <navo text="Soccer" url="/soccer"></navo>
-                <navo text="NBA" url="/NBA"></navo>
+                <navitem url="#/sport/soccer">Soccer</navitem>
+                <navitem url="#/sport/nba">NBA</navitem>
             </navs>
         </div>
         <div class="grid__col grid__col--11-of-12">

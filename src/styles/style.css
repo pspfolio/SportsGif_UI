@@ -8,6 +8,10 @@ iframe {
     width: 100%;
 }
 
+.active {
+    font-size: 3em;
+}
+
 .gif-list {
     list-style: none;
     padding-left: 0;
