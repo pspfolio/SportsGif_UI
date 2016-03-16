@@ -1,20 +1,26 @@
 (function(){
 
-function ctrl() {
+function ctrl($scope, $location) {
+    var vm = this;
     this.navs = [];
+
+    $scope.$on("$locationChangeSuccess", function() {
+        vm.setActiveNav();
+    });
+
     this.addNav = function(nav) {
         if(nav.url === '/NBA') {
-            console.log("selected");
             nav.selected = true;
         }
-        console.log('pushing', nav);
         this.navs.push(nav);
     }
-}
 
-function link($scope) {
-    
-}
+    this.setActiveNav = function() {
+        for(var i = 0; i < vm.navs.length; i++) {
+            vm.navs[i].selected = vm.navs[i].url === '#' + $location.$$path;
+        }
+    }
+};
 
 function navs() {
     return {
@@ -23,8 +29,7 @@ function navs() {
         transclude: true,
         controller: ctrl,
         controllerAs: 'vm',
-        templateUrl: 'src/components/navigation/navs/navs.html',
-        link: link
+        templateUrl: 'src/components/navigation/navs/navs.html'
     };
 }
 
