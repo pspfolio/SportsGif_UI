@@ -65,3 +65,31 @@ iframe {
     color: #CE1141;
     font-size: 1.11em;
 }
+
+/**********************************/
+/**     NAVIGATION COMPONENT     **/
+/**********************************/
+.nav-main {
+    margin-top: -0.5em;
+    margin-left: -0.5em; /* reseting styles */
+    padding: 0; /* reseting styles */
+}
+
+.nav-item {
+    list-style: none;
+    line-height: 30px;
+}
+
+.nav-group-title {
+    margin-left: -0.5em;
+    font-size: 1.1em;
+    font-weight: 300;
+}
+
+.nav-item a {
+    text-decoration: none;
+}
+
+.active {
+    font-weight: bold;
+}

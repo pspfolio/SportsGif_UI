@@ -6,6 +6,7 @@
         GifFactory.gifs = [];
 
         GifFactory.getGifs = function(subCategory) {
+            console.log('get gifs');
             return $http.get('http://localhost:1337/api/gifs/' + subCategory).success(function (data) {
                 var gifs = InitData(data);
         		GifFactory.gifs = gifs;
