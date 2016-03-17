@@ -9,10 +9,8 @@ function ctrl($scope, $location) {
     });
 
     this.addNav = function(nav) {
-        if(nav.url === '/NBA') {
-            nav.selected = true;
-        }
         this.navs.push(nav);
+        this.setActiveNav();
     }
 
     this.setActiveNav = function() {
@@ -25,7 +23,9 @@ function ctrl($scope, $location) {
 function navs() {
     return {
         restrict: 'E',
-        scope: {},
+        scope: {
+            title: '@'
+        },
         transclude: true,
         controller: ctrl,
         controllerAs: 'vm',
