@@ -7,6 +7,7 @@
         vm.selectedGif = {};
 
         vm.setGif = function(gif) {
+            console.log(gif);
             vm.selectedGif = gif;
         };
 

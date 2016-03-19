@@ -13,6 +13,11 @@
             controller: 'gifsCtrl',
             controllerAs: 'vm'
         })
+        .when('/esport/:subCategory', {
+            templateUrl: 'src/partials/gif-list.html',
+            controller: 'gifsCtrl',
+            controllerAs: 'vm'
+        })
         .otherwise({ redirectTo: '/' });
 
         $sceDelegateProvider.resourceUrlWhitelist([
@@ -24,7 +29,9 @@
             'http://gfycat.com/**',
             'https://gfycat.com/**',
             'http://www.gfycat.com/**',
-            'https://www.gfycat.com/**'
+            'https://www.gfycat.com/**',
+            'https://giant.gfycat.com/**',
+            'https://zippy.gfycat.com/**'
         ]);
     };
 
