@@ -1,6 +1,12 @@
+html {
+    height: 100%;
+}
+
 body {
     font-family: 'Roboto', sans-serif;
     -webkit-font-smoothing: antialiased;
+    min-height: 100%;
+    background-color: #EDF3F7;
 }
 
 iframe {
@@ -12,6 +18,8 @@ iframe {
 .gif-list {
     list-style: none;
     padding-left: 0;
+    background-color: #fff;
+    padding: 10px 15px;
 }
 
 .gif-iframe {
@@ -20,6 +28,8 @@ iframe {
 
 .gif-content {
     width: 80%;
+    background-color: #fff;
+    padding: 15px;
 }
 
 .gif-title {
@@ -39,14 +49,14 @@ iframe {
     transition: all .3s ease-in;
 }
 
-.gif-link:before {
+.gif-link:after {
     content: '';
     position: absolute;
     width: 100%;
     height: 1px;
     background-color: rgba(0, 0, 0, .1);
     left: 0;
-    top: -10px;
+    bottom: -10px;
 }
 
 .gif-link .gif-link-added {
@@ -70,19 +80,21 @@ iframe {
 
 .category-title {
     font-weight: 300;
-    font-size: 2.2em;
+    color: #F04F58;
+    font-size: 2.5em;
     text-transform: uppercase;
-    padding: 10px;
+    padding-left: 15px;
+    letter-spacing: 2px;
 }
 
 
 /**********************************/
 /**             TOPNAV           **/
 /**********************************/
-
+/**/
 .top-nav {
-    width: 100%;
-    background-color: #202729;
+    width: 12.5%;
+    background-color: #F04F58;
 }
 
 .top-nav-title {
@@ -91,6 +103,7 @@ iframe {
     padding: 10px 25px;
     font-family: 'Nunito', sans-serif;
     letter-spacing: 1.5px;
+    text-align: center;
 }
 
 
@@ -98,15 +111,15 @@ iframe {
 /**     NAVIGATION COMPONENT     **/
 /**********************************/
 .nav-side {
-    background-color: #202629;
+    background-color: #1D2734;
 }
 .nav-main {
-    padding-left: 15px; /* reseting styles */
+    padding-left: 0;
 }
 
 .nav-item {
     list-style: none;
-    line-height: 30px;
+    line-height: 65px;
 }
 
 .nav-group-title {
@@ -115,10 +128,18 @@ iframe {
     font-weight: 300;
 }
 
-.nav-item a {
+.nav-url {
+    color: #A1A4A7;
+    padding-left: 30px;
     text-decoration: none;
+    letter-spacing: 1.2px;
 }
 
 .active {
     font-weight: bold;
+    background-color: #19212D;
+}
+
+.active .nav-url {
+    color: white;
 }
