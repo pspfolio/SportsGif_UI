@@ -93,14 +93,14 @@ iframe {
 /**********************************/
 /**/
 .top-nav {
-    width: 12.5%;
     background-color: #F04F58;
+    margin-top: -15px;
 }
 
 .top-nav-title {
     font-size: 1.2em;
     color: #fff;
-    padding: 10px 25px;
+    padding: 25px 25px;
     font-family: 'Nunito', sans-serif;
     letter-spacing: 1.5px;
     text-align: center;

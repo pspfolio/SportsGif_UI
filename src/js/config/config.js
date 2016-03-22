@@ -31,7 +31,8 @@
             'http://www.gfycat.com/**',
             'https://www.gfycat.com/**',
             'https://giant.gfycat.com/**',
-            'https://zippy.gfycat.com/**'
+            'https://zippy.gfycat.com/**',
+            'https://fat.gfycat.com/**'
         ]);
     };
 
