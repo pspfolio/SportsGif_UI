@@ -6,8 +6,6 @@
             scope: {
                 category: '@'
             },
-            controller: ctrl,
-            controllerAs: 'vm',
             templateUrl: 'src/components/gifs/gifs.html'
         }
     }
