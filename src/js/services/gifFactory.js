@@ -5,9 +5,11 @@
 
         GifFactory.gifs = [];
 
-        GifFactory.getGifs = function(subCategory) {
-            console.log('get gifs');
-            return $http.get('http://localhost:1337/api/gifs/' + subCategory).success(function (data) {
+        GifFactory.getGifs = function(subCategory, limit) {
+            var baseurl = 'http://localhost:1337/api/gifs/' + subCategory;
+            var url = limit ? baseurl + '/' + limit : baseurl;
+
+            return $http.get(url).success(function (data) {
                 var gifs = InitData(data);
         		GifFactory.gifs = gifs;
         	}).error(function (data) {

@@ -3,15 +3,15 @@
     function gifsCtrl($scope, GifFactory) {
         var vm = this;
         var category = $scope.category;
+        var limit = $scope.limit;
         vm.gifs = GifFactory.gifs;
         vm.selectedGif = {};
 
         vm.setGif = function(gif) {
             vm.selectedGif = gif;
         };
-        console.log(category);
 
-        GifFactory.getGifs(category).then(function() {
+        GifFactory.getGifs(category, limit).then(function() {
             vm.gifs = GifFactory.gifs;
         });
     };

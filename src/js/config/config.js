@@ -4,9 +4,7 @@
 
         $routeProvider
         .when('/', {
-            templateUrl: 'src/partials/frontpage.html',
-            controller: 'gifsCtrl',
-            controllerAs: 'vm'
+            templateUrl: 'src/partials/frontpage.html'
         })
         .when('/sport/:subCategory', {
             templateUrl: 'src/partials/gif-list.html',
