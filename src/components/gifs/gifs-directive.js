@@ -1,8 +1,8 @@
 (function () {
     
-    function gifsCtrl($scope, GifFactory) {
+    function gifsCtrl($scope, GifFactory, $routeParams) {
         var vm = this;
-        var category = $scope.category;
+        var category = $scope.category || $routeParams.subCategory;
         var limit = $scope.limit;
         vm.gifs = GifFactory.gifs;
         vm.selectedGif = {};

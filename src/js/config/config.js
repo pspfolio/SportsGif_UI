@@ -7,14 +7,10 @@
                 templateUrl: 'src/partials/frontpage.html'
             })
             .when('/sport/:subCategory', {
-                templateUrl: 'src/partials/gif-list.html',
-                controller: 'gifsCtrl',
-                controllerAs: 'vm'
+                templateUrl: 'src/partials/gif-list.html'
             })
             .when('/esport/:subCategory', {
-                templateUrl: 'src/partials/gif-list.html',
-                controller: 'gifsCtrl',
-                controllerAs: 'vm'
+                templateUrl: 'src/partials/gif-list.html'
             })
             .otherwise({ redirectTo: '/' });
 
