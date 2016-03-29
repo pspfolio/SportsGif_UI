@@ -3,17 +3,19 @@
     function gifsCtrl($scope, GifFactory, $routeParams) {
         var vm = this;
         var category = $scope.category || $routeParams.subCategory;
+        
         var limit = $scope.limit;
         vm.gifs = GifFactory.gifs;
-        vm.selectedGif = {};
-
-        vm.setGif = function (gif) {
-            vm.selectedGif = gif;
-        };
 
         GifFactory.getGifs(category, limit).then(function () {
             vm.gifs = GifFactory.gifs;
         });
+    }
+    
+    function gifsLink(scope, element, attrs, ctrl) {
+        scope.selectGif = function (gif) {
+            ctrl.setGif(gif);
+        }
     }
 
     function gifs() {
@@ -23,8 +25,10 @@
                 category: '@',
                 limit: '@'
             },
+            require: '^gifplayer',
             controller: gifsCtrl,
             controllerAs: 'vm',
+            link: gifsLink,
             templateUrl: 'src/components/gifs/gifs.html'
         };
     }

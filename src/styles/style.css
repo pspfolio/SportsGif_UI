@@ -23,6 +23,7 @@ iframe {
 }
 
 .gif-iframe {
+    top: 81px;
     position: fixed;
 }
 
@@ -69,12 +70,10 @@ iframe {
 
 .gif-active {
     color: #CE1141;
-    font-size: 1.11em;
 }
 
 .gif-link:hover {
     color: #CE1141;
-    font-size: 1.11em;
 }
 
 
