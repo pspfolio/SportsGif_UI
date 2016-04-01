@@ -1,24 +1,18 @@
-(function(){
+(function () {
 
     function Configz($routeProvider, $sceDelegateProvider) {
 
         $routeProvider
-        .when('/', {
-            templateUrl: 'src/partials/frontpage.html',
-            controller: 'gifsCtrl',
-            controllerAs: 'vm'
-        })
-        .when('/sport/:subCategory', {
-            templateUrl: 'src/partials/gif-list.html',
-            controller: 'gifsCtrl',
-            controllerAs: 'vm'
-        })
-        .when('/esport/:subCategory', {
-            templateUrl: 'src/partials/gif-list.html',
-            controller: 'gifsCtrl',
-            controllerAs: 'vm'
-        })
-        .otherwise({ redirectTo: '/' });
+            .when('/', {
+                templateUrl: 'src/partials/frontpage.html'
+            })
+            .when('/sport/:subCategory', {
+                templateUrl: 'src/partials/gif-list.html'
+            })
+            .when('/esport/:subCategory', {
+                templateUrl: 'src/partials/gif-list.html'
+            })
+            .otherwise({ redirectTo: '/' });
 
         $sceDelegateProvider.resourceUrlWhitelist([
             'self',
@@ -34,7 +28,7 @@
             'https://zippy.gfycat.com/**',
             'https://fat.gfycat.com/**'
         ]);
-    };
+    }
 
     angular.module('app').config(Configz);
-})();
+}());

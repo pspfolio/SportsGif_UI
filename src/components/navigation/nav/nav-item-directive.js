@@ -1,4 +1,4 @@
-(function() {
+(function () {
 
     function link($scope, $element, $attrs, $ctrl) {
         $scope.nav = {
@@ -12,7 +12,7 @@
         return {
             restrict: 'E',
             scope: {
-                url: '@',
+                url: '@'
             },
             require: '^navs',
             transclude: true,
@@ -20,7 +20,7 @@
             templateUrl: 'src/components/navigation/nav/nav-item.html',
             link: link
         };
-    };
+    }
 
     angular.module('app').directive('navitem', navitem);
-})();
+}());

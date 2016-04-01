@@ -1,20 +1,26 @@
-(function() {
-
-    function gifsCtrl($scope, GifFactory) {
+(function () {
+    
+    function gifsCtrl($scope, GifFactory, $routeParams) {
         var vm = this;
-        var category = $scope.category;
+        var category = $scope.category || $routeParams.subCategory;
+        
+        var limit = $scope.limit;
         vm.gifs = GifFactory.gifs;
-        vm.selectedGif = {};
 
-        vm.setGif = function(gif) {
-            vm.selectedGif = gif;
-        };
-        console.log(category);
-
-        GifFactory.getGifs(category).then(function() {
+        GifFactory.getGifs(category, limit).then(function () {
             vm.gifs = GifFactory.gifs;
         });
-    };
+    }
+    
+    function gifsLink(scope, element, attrs, ctrl) {
+        scope.selectGif = function (gif) {
+            ctrl.setGif(gif);
+        }
+        
+        scope.selectedGif = function () {
+            return ctrl.getSelectedGif();
+        }
+    }
 
     function gifs() {
         return {
@@ -23,10 +29,12 @@
                 category: '@',
                 limit: '@'
             },
+            require: '^gifplayer',
             controller: gifsCtrl,
             controllerAs: 'vm',
+            link: gifsLink,
             templateUrl: 'src/components/gifs/gifs.html'
-        }
+        };
     }
 
     angular.module('app').directive('gifs', gifs);

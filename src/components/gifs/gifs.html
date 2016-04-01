@@ -1,9 +1,9 @@
 <h1>{{ category }}</h1>
 
-<div class="grid__col grid__col--1-of-3">
+<div class="">
     <ul class="gif-list">
         <li ng-repeat="gif in vm.gifs">
-            <p class="gif-link" ng-click="vm.setGif(gif)" ng-class="{'gif-active': gif._id === vm.selectedGif._id}">
+            <p class="gif-link" ng-click="selectGif(gif)" ng-class="{'gif-active': gif._id === selectedGif()._id}">
                 <span class="gif-link-added">{{gif.added}}</span>
                 <span class="gif-link-title">{{gif.title}}</span>
             </p>
