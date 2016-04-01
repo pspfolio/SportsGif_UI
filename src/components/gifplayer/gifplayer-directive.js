@@ -7,6 +7,10 @@
         vm.setGif = function (gif) {
             vm.selectedGif = gif;
         };
+        
+        vm.getSelectedGif = function () {
+            return vm.selectedGif;
+        };
     }
     
     function gifplayer() {

@@ -16,6 +16,10 @@
         scope.selectGif = function (gif) {
             ctrl.setGif(gif);
         }
+        
+        scope.selectedGif = function () {
+            return ctrl.getSelectedGif();
+        }
     }
 
     function gifs() {
