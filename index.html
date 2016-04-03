@@ -1,48 +1,54 @@
 <!DOCTYPE html>
 <html ng-app="app">
 
-    <head>
-        <meta charset="utf-8">
-        <title>Gifs</title>
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link href='https://fonts.googleapis.com/css?family=Roboto:400,300' rel='stylesheet' type='text/css'>
-        <link href='https://fonts.googleapis.com/css?family=Nunito' rel='stylesheet' type='text/css'>
-        <link href='./node_modules/normalize.css/normalize.css' rel='stylesheet' />
-        <link href="./src/styles/lib/toast.css" rel="stylesheet" />
-        <link href="./src/styles/style.css" rel="stylesheet" />
+	<head>
+		<meta charset="utf-8">
+		<title>Gifs</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link href='https://fonts.googleapis.com/css?family=Roboto:400,300' rel='stylesheet' type='text/css'>
+		<link href='https://fonts.googleapis.com/css?family=Nunito' rel='stylesheet' type='text/css'>
+		<link href='./node_modules/normalize.css/normalize.css' rel='stylesheet' />
+		<link href="./src/styles/lib/toast.css" rel="stylesheet" />
+		<link href="http://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.6/css/bootstrap.min.css" rel='stylesheet'>
+		<link href="./src/styles/style.css" rel="stylesheet" />
 
-        <script src="./bower_components/jquery/dist/jquery.min.js"></script>
-        <script src="./bower_components/angular/angular.min.js"></script>
-        <script src="./bower_components/angular-route/angular-route.min.js"></script>
-        <script src="./bower_components/moment/moment.js"></script>
-        <script src="./src/js/app.js"></script>
-        <script src="./src/js/services/GifFactory.js"></script>
-        <script src="./src/js/config/config.js"></script>
-        <script src="./src/components/navigation/navs/navs-directive.js"></script>
-        <script src="./src/components/navigation/nav/nav-item-directive.js"></script>
-        <script src="./src/components/gifs/gifs-directive.js"></script>
-        <script src="./src/components/gifplayer/gifplayer-directive.js"></script>
-    </head>
+		<script src="./bower_components/jquery/dist/jquery.min.js"></script>
+		<script src="./bower_components/angular/angular.min.js"></script>
+		<script src="./bower_components/angular-route/angular-route.min.js"></script>
+		<script src="./bower_components/moment/moment.js"></script>
+		
+		<script src="./src/js/app.js"></script>
+		<script src="./src/js/ctrl/gifsCtrl.js"></script>
+		<script src="./src/js/services/GifFactory.js"></script>
+		<script src="./src/js/config/config.js"></script>
+		<script src="./src/components/navigation/navs/navs-directive.js"></script>
+		<script src="./src/components/navigation/nav/nav-item-directive.js"></script>
+		<script src="./src/components/gifs/gifs-directive.js"></script>
+		<script src="./src/components/gifplayer/gifplayer-directive.js"></script>
+	</head>
 
-    <body>
-        <div class="grid">
-            <div class="grid__col grid__col--1-of-8 nav-side">
-                <div class="top-nav">
-                    <h1 class="top-nav-title">gifser</h1>
-                </div>
-                <navs title="SPORT">
-                    <navitem url="#/sport/soccer">Soccer</navitem>
-                    <navitem url="#/sport/nba">NBA</navitem>
-                </navs>
-                <navs title="E-SPORT">
-                    <navitem url="#/esport/GlobalOffensive">CS:GO</navitem>
-                    <navitem url="#/esport/RocketLeague">RocketLeague</navitem>
-                </navs>
-            </div>
-            <div class="grid__col grid__col--7-of-8">
-                <div ng-view></div>
-            </div>
-        </div>
-    </body>
+	<body>
+		<div class="container-fluid">
+			<!--<div class="grid">
+				<div class="grid__col grid__col--1-of-1 top-nav">
+					<h1 class="top-nav-title">gifser</h1>
+				</div>
+			</div>-->
+			<nav class="sidebar sidebar-left">
+				<navs title="SPORT">
+					<navitem url="#/sport/soccer">Soccer</navitem>
+					<navitem url="#/sport/nba">NBA</navitem>
+				</navs>
+				<navs title="E-SPORT">
+					<navitem url="#/esport/GlobalOffensive">CS:GO</navitem>
+					<navitem url="#/esport/RocketLeague">RocketLeague</navitem>
+				</navs>
+			</nav>
+			<section class="main-content">
+				<div ng-view></div>
+			</div>
 
+			</div>
+		</div>
+	</body>
 </html>
