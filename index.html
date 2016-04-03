@@ -28,13 +28,13 @@
 	</head>
 
 	<body>
-		<div class="grid">
-			<div class="grid__col grid__col--1-of-1 top-nav">
-				<h1 class="top-nav-title">gifser</h1>
-			</div>
-		</div>
-		<div class="grid">
-			<div class="grid__col grid__col--1-of-8 nav-side">
+		<div class="container-fluid">
+			<!--<div class="grid">
+				<div class="grid__col grid__col--1-of-1 top-nav">
+					<h1 class="top-nav-title">gifser</h1>
+				</div>
+			</div>-->
+			<nav class="sidebar sidebar-left">
 				<navs title="SPORT">
 					<navitem url="#/sport/soccer">Soccer</navitem>
 					<navitem url="#/sport/nba">NBA</navitem>
@@ -43,9 +43,11 @@
 					<navitem url="#/esport/GlobalOffensive">CS:GO</navitem>
 					<navitem url="#/esport/RocketLeague">RocketLeague</navitem>
 				</navs>
-			</div>
-			<div class="grid__col grid__col--7-of-8">
+			</nav>
+			<section class="main-content">
 				<div ng-view></div>
+			</div>
+
 			</div>
 		</div>
 	</body>
