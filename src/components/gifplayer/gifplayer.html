@@ -1,0 +1,9 @@
+<div class=""> 
+        <div class="grid__col grid__col--1-of-3" ng-transclude></div>
+    <div class="grid__col grid__col--2-of-3 gif-iframe">
+        <div class="gif-content" ng-show="Object.keys(vm.selectedGif).length !== 0"> 
+            <h2 class="gif-title">{{vm.selectedGif.title}}</h2>
+            <iframe ng-src="{{vm.selectedGif.url}}" scrolling="no"></iframe>
+        </div>
+    </div>
+</div> 
