@@ -1,9 +1,9 @@
 <div class="row">
-	<div class="col-md-3" ng-transclude></div>
-	<div class="col-md-9 gif-iframe">
-		<div class="gif-content" ng-show="Object.keys(vm.selectedGif).length !== 0"> 
+	<div class="no-padding col-xs-12 col-sm-3" ng-transclude></div>
+	<div class="col-xs-12 col-sm-9 gif-iframe">
+		<div class="gif-content" ng-show="Object.keys(vm.selectedGif).length !== 0">
 			<h2 class="gif-title">{{vm.selectedGif.title}}</h2>
-			<iframe ng-src="{{vm.selectedGif.url}}" scrolling="no"></iframe>
+				<iframe ng-src="{{vm.selectedGif.url}}" scrolling="no"></iframe>
 		</div>
 	</div>
 </div>
