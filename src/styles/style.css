@@ -158,3 +158,61 @@ iframe {
 .active .nav-url {
     color: white;
 }
+
+.toggle-button {
+	display: none;
+}
+
+@media (max-width: 992px) {
+	.sidebar {
+		left: -240px;
+	}
+	
+	.main-content {
+		margin-left: 0px;
+	}
+	
+	.gif-content {
+		width: 70%;
+	}
+	
+	.toggle-button {
+		display: block;
+	}
+	
+	.showMenu {
+		left: 0;
+	}
+}
+
+@media (max-width: 768px) {
+	body {
+		background-color: #FFF;
+	}
+	
+	.gif-content {
+		width: 100%;
+		height: 45%;
+		top: 0;
+		right: 0;
+		left: 0;
+		padding: 0;
+	}
+	
+	.gif-content h2{
+		padding-left: 15px;
+	}
+	
+	iframe {
+		height: 100%;
+		padding: 0;
+	}
+	
+	.gif-list {
+		margin-top: 91%;
+	}
+	
+	.no-padding {
+		padding: 0;
+	}
+}
