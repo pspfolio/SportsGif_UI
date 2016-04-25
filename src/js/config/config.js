@@ -4,13 +4,19 @@
 
         $routeProvider
             .when('/', {
-                templateUrl: 'src/partials/frontpage.html'
+                templateUrl: 'src/partials/frontpage.html',
+				controllerAs: 'vm',
+				controller: 'frontpageCtrl'
             })
             .when('/sport/:subCategory', {
-                templateUrl: 'src/partials/gif-list.html'
+                templateUrl: 'src/partials/gif-list.html',
+				controllerAs: 'vm',
+				controller: 'gifListCtrl',
             })
             .when('/esport/:subCategory', {
-                templateUrl: 'src/partials/gif-list.html'
+                templateUrl: 'src/partials/gif-list.html',
+				controllerAs: 'vm',
+				controller: 'gifListCtrl',
             })
             .otherwise({ redirectTo: '/' });
 

@@ -1,6 +1,5 @@
-<h1>{{ category }}</h1>
-
-<div class="">
+<div class="gifs-container">
+	<h1>{{ category }}</h1>
 	<ul class="gif-list">
 		<li ng-repeat="gif in vm.gifs">
 			<p class="gif-link" ng-click="selectGif(gif)" ng-class="{'gif-active': gif._id === selectedGif()._id}">
