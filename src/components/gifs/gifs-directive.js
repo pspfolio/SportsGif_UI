@@ -1,14 +1,11 @@
 (function () {
     
-	function gifsCtrl($scope, GifFactory, $routeParams) {
+	function gifsCtrl(GifFactory, $routeParams) {
 		var vm = this;
-		console.log($scope.category + ' directive');
-		var category = $scope.category || $routeParams.subCategory;
-        
-		var limit = $scope.limit;
-		vm.gifs = GifFactory.gifs;
 
-		GifFactory.getGifs(category, limit).then(function () {
+		var category = vm.category || $routeParams.subCategory;
+		
+		GifFactory.getGifs(category, vm.limit).then(function () {
 			vm.gifs = GifFactory.gifs;
 		});
 	}
@@ -34,7 +31,8 @@
 			controller: gifsCtrl,
 			controllerAs: 'vm',
 			link: gifsLink,
-			templateUrl: 'src/components/gifs/gifs.html'
+			templateUrl: 'src/components/gifs/gifs.html',
+			bindToController: true
 		};
 	}
 
