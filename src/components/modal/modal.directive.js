@@ -8,7 +8,8 @@
 			restrict: 'E',
 			scope: {},
 			templateUrl: 'src/components/modal/modal.html',
-			link: linkModal
+			link: linkModal,
+			replace: true
 		};
 	}
 	
@@ -16,13 +17,16 @@
 		console.log(element);
 		$(element).modal('hide');
 
-		scope.$watch(function() {return attrs.visible}, function(value) {
-			console.log(value);
+		scope.showModal = function(value, elem) {
 			if(value) {
-				$(element).modal('show');
+				$(elem).modal('show');
 			} else {
-				$(element).modal('hide');
+				$(elem).modal('hide');
 			}
+		}
+		
+		scope.$watch(function() {return attrs.visible}, function(value) {
+			scope.showModal(value, element);
 		});
 	}
 	
