@@ -2,22 +2,26 @@
     
 	function gifsCtrl(GifFactory, $routeParams) {
 		var vm = this;
-
+		
 		var category = vm.category || $routeParams.subCategory;
 		
 		GifFactory.getGifs(category, vm.limit).then(function () {
 			vm.gifs = GifFactory.gifs;
 		});
+		
+		vm.selectGif = function(gif) {
+			vm.selgif = gif;
+		};
 	}
     
 	function gifsLink(scope, element, attrs, ctrl) {
-		scope.selectGif = function (gif) {
+		/*scope.selectGif = function (gif) {
 			ctrl.setGif(gif);
 		};
-        
-		scope.selectedGif = function () {
+        */
+		/*scope.selectedGif = function () {
 			return ctrl.getSelectedGif();
-		};
+		};*/
 	}
 
 	function gifs() {
@@ -25,9 +29,9 @@
 			restrict: 'E',
 			scope: {
 				category: '=',
-				limit: '='
+				limit: '=',
+				selgif: '='
 			},
-			require: '^gifplayer',
 			controller: gifsCtrl,
 			controllerAs: 'vm',
 			link: gifsLink,
