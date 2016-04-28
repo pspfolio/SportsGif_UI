@@ -13,16 +13,6 @@
 			vm.selgif = gif;
 		};
 	}
-    
-	function gifsLink(scope, element, attrs, ctrl) {
-		/*scope.selectGif = function (gif) {
-			ctrl.setGif(gif);
-		};
-        */
-		/*scope.selectedGif = function () {
-			return ctrl.getSelectedGif();
-		};*/
-	}
 
 	function gifs() {
 		return {
@@ -34,7 +24,6 @@
 			},
 			controller: gifsCtrl,
 			controllerAs: 'vm',
-			link: gifsLink,
 			templateUrl: 'src/components/gifs/gifs.html',
 			bindToController: true
 		};

@@ -10,11 +10,6 @@
 		vm.categoryNba = "nba";
 		vm.categorySoccer = "soccer";
 		vm.limit = "5";
-		
 		vm.selectedGif = {};
-		
-		vm.selectGif = function(gif) {
-			console.log(gif);
-		};
 	}
 }());

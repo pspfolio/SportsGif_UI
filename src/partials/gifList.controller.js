@@ -9,5 +9,6 @@
 	function gifListCtrl($routeParams) {
 		var vm = this;
 		vm.subCategory = $routeParams.subCategory;
+		vm.selectedGif = {};
 	}
 }());

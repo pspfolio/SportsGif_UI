@@ -33,6 +33,7 @@
 		
 		$(element).bind("hide.bs.modal", function () {
 			if (!scope.$$phase && !scope.$root.$$phase) {
+				// removing iframe player source -> not playing video when hidden
 				$(element[0].querySelector('.player')).attr('src', '');
 				scope.selectedGif = {};
 				scope.$apply();
