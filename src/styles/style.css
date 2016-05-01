@@ -1,3 +1,25 @@
+/*
+	ANIMATIONS
+*/
+
+@keyframes fade-in {
+	0% {
+		opacity: 0;
+		transform: translateX(1em);
+	}
+	100% {
+		opacity: 1;
+		transform: translateX(0);
+	}
+}
+
+.fade-in {
+	animation: fade-in .4s ease-in;
+}
+/*
+	STYLES
+*/
+
 html {
     height: 100%;
 }
@@ -205,15 +227,6 @@ iframe {
 	
 	.gif-content h2{
 		padding-left: 15px;
-	}
-	
-	iframe {
-		height: 100%;
-		padding: 0;
-	}
-	
-	.gif-list {
-		margin-top: 91%;
 	}
 	
 	.no-padding {
