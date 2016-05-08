@@ -1,12 +1,13 @@
 (function () {
 
-	function GifFactory($http) {
+	GifFactory.$inject = ['$http', 'API_GIFS_URL'];
+	function GifFactory($http, API_GIFS_URL) {
 		var GifFactory = {};
 
 		GifFactory.gifs = [];
 
-		GifFactory.getGifs = function (subCategory, limit) {
-			var baseurl = 'http://localhost:1337/api/gifs/' + subCategory;
+		GifFactory.getGifs = function (subCategory, limit, skip) {
+			var baseurl = API_GIFS_URL + subCategory;
 			var url = limit ? baseurl + '/' + limit : baseurl;
 
 			return $http.get(url).success(function (data) {
@@ -15,7 +16,7 @@
 			}).error(function (data) {
 				console.log('error in get');
 			});
-		}
+		};
 		return GifFactory;
 	}
 
