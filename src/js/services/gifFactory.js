@@ -3,20 +3,21 @@
 	GifFactory.$inject = ['$http', 'API_GIFS_URL'];
 	function GifFactory($http, API_GIFS_URL) {
 		var GifFactory = {};
-
-		GifFactory.gifs = [];
-
+		
 		GifFactory.getGifs = function (subCategory, limit, skip) {
 			var baseurl = API_GIFS_URL + subCategory;
-			var url = limit ? baseurl + '/' + limit : baseurl;
+			var take = limit ? limit : 50;
+			var page = skip ? skip : 0;
+			var url = baseurl + '/' + take + '/' + page;
 
 			return $http.get(url).success(function (data) {
 				var gifs = InitData(data);
-				GifFactory.gifs = gifs;
+				return gifs;
 			}).error(function (data) {
 				console.log('error in get');
 			});
 		};
+		
 		return GifFactory;
 	}
 

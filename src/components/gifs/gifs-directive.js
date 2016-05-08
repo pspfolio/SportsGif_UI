@@ -2,35 +2,27 @@
     
 	function gifsCtrl(GifFactory, $routeParams) {
 		var vm = this;
-		var page = 0;
-		
+		var page = 0;		
 		var category = vm.category || $routeParams.subCategory;
 		
-		GifFactory.getGifs(category, vm.limit).then(function () {
-			vm.gifs = sliceGifs(0);
-		});
-		
 		vm.selectGif = function(gif) {
-			vm.selgif = gif;
+			console.log(gif);
+			console.log(vm.selectedGif);
+			vm.selectedGif = gif;
 		};
 		
 		vm.loadMore = function() {
 			page++;
-			var newGifs = sliceGifs(page*50);
-			console.log(newGifs);
-			vm.gifs = vm.gifs.concat(newGifs);
 		};
 		
-		// move to factory / get data always from backend
-		function sliceGifs(skip) {
-			var gifs = null;
-			if(skip === 0) {
-				gifs = GifFactory.gifs.slice(0, 50);
-			} else {
-				gifs = GifFactory.gifs.slice(skip, skip*2);
-			}
-			
-			return gifs;
+		getGifs();
+		
+		function getGifs() {
+			GifFactory.getGifs(vm.category, vm.limit)
+				.then(function (gifs) {
+					var data = gifs.data;
+					vm.gifs =  vm.gifs ? vm.gifs.concat(data) : data;
+				});
 		}
 	}
 
@@ -40,7 +32,7 @@
 			scope: {
 				category: '=',
 				limit: '=',
-				selgif: '='
+				selectedGif: '='
 			},
 			controller: gifsCtrl,
 			controllerAs: 'vm',

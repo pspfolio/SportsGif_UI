@@ -2,8 +2,7 @@
 	<h1 ng-bind="vm.category"></h1>
 	<ul class="gif-list">
 		<li class="fade-in" ng-repeat="gif in vm.gifs track by gif._id">
-			<p class="gif-link" ng-click="vm.selectGif(gif)" 
-				ng-class="{'gif-active': gif._id === selectedGif()._id}">
+			<p class="gif-link" ng-click="vm.selectGif(gif)">
 				<span class="gif-link-added" ng-bind="gif.added"></span>
 				<span class="gif-link-title" ng-bind="gif.title"></span>
 			</p>
