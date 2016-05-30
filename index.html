@@ -5,7 +5,7 @@
 		<meta charset="utf-8">
 		<title>Gifs</title>
 		<meta name="viewport" content="width=device-width, initial-scale=1">
-		<link href='https://fonts.googleapis.com/css?family=Roboto:400,300' rel='stylesheet' type='text/css'>
+		<link href='https://fonts.googleapis.com/css?family=Roboto:700,500,400,300' rel='stylesheet' type='text/css'>
 		<link href='https://fonts.googleapis.com/css?family=Nunito' rel='stylesheet' type='text/css'>
 		<link href='./node_modules/normalize.css/normalize.css' rel='stylesheet' />
 		<link href="./src/styles/lib/toast.css" rel="stylesheet" />
@@ -15,7 +15,12 @@
 
 	<body>
 		<navtop></navtop>
-		<div class="container">
+		<div class="container main-container">
+			<ul class="filters">
+				<li class="filter">Newest</li>
+				<li class="filter">Popular</li>
+				<li class="filter active">Picks</li>
+			</ul>
 			<section class="main-content">
 				<div ng-view></div>
 			</section>
