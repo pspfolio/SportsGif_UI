@@ -1,40 +1,30 @@
 (function () {
 
-    function Configz($routeProvider, $sceDelegateProvider) {
+	function Configz($routeProvider, $sceDelegateProvider) {
 
-        $routeProvider
-            .when('/', {
-                templateUrl: 'src/partials/frontpage.html',
+		$routeProvider
+			.when('/', {
+			templateUrl: 'src/partials/frontpage.html',
 				controllerAs: 'vm',
 				controller: 'frontpageCtrl'
-            })
-            .when('/sport/:subCategory', {
-                templateUrl: 'src/partials/gif-list.html',
-				controllerAs: 'vm',
-				controller: 'gifListCtrl',
-            })
-            .when('/esport/:subCategory', {
-                templateUrl: 'src/partials/gif-list.html',
-				controllerAs: 'vm',
-				controller: 'gifListCtrl',
-            })
-            .otherwise({ redirectTo: '/' });
+			})
+			.otherwise({ redirectTo: '/' });
 
-        $sceDelegateProvider.resourceUrlWhitelist([
-            'self',
-            'http://streamable.com/**',
-            'https://streamable.com/**',
-            'http://www.streamable.com/**',
-            'https://www.streamable.com/**',
-            'http://gfycat.com/**',
-            'https://gfycat.com/**',
-            'http://www.gfycat.com/**',
-            'https://www.gfycat.com/**',
-            'https://giant.gfycat.com/**',
-            'https://zippy.gfycat.com/**',
-            'https://fat.gfycat.com/**'
-        ]);
-    }
+		$sceDelegateProvider.resourceUrlWhitelist([
+			'self',
+			'http://streamable.com/**',
+			'https://streamable.com/**',
+			'http://www.streamable.com/**',
+			'https://www.streamable.com/**',
+			'http://gfycat.com/**',
+			'https://gfycat.com/**',
+			'http://www.gfycat.com/**',
+			'https://www.gfycat.com/**',
+			'https://giant.gfycat.com/**',
+			'https://zippy.gfycat.com/**',
+			'https://fat.gfycat.com/**'
+		]);
+	}
 
-    angular.module('app').config(Configz);
+	 angular.module('app').config(Configz);
 }());

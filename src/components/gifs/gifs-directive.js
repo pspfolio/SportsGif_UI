@@ -17,7 +17,6 @@
 		getGifs();
 		
 		function getGifs() {
-			console.log(page);
 			GifFactory.getGifs(vm.category, vm.limit, page)
 				.then(function (gifs) {
 					vm.gifs =  vm.gifs ? vm.gifs.concat(gifs.data) : gifs.data;

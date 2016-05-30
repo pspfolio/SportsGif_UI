@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="37px" height="37px" viewBox="0 0 37 37" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 3.8.2 (29753) - http://www.bohemiancoding.com/sketch -->
+    <title>basketball</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Welcome" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Desktop-HD" transform="translate(-49.000000, -41.000000)">
+            <g id="Nav">
+                <g id="basketball" transform="translate(50.000000, 42.000000)">
+                    <g id="Layer_1">
+                        <circle id="XMLID_1_" stroke="#FFFFFF" fill="#FFFFFF" cx="17.5261194" cy="17.5261194" r="17.2126866"></circle>
+                        <path d="M17,0.182835821 L17,34.8171642" id="XMLID_2_" stroke="#FFC952" stroke-width="2"></path>
+                        <path d="M34.8432836,17 L0.156716418,17" id="XMLID_6_" stroke="#FFC952" stroke-width="2"></path>
+                        <path d="M5.35447761,5.11940299 L5.38059701,5.14552239 C11.9626866,12.2238806 22.9328358,12.119403 29.5149254,5.04104478 L29.5410448,5.01492537" id="XMLID_7_" stroke="#FFC952" stroke-width="2"></path>
+                        <path d="M29.8022388,29.8283582 L29.7761194,29.7761194 C23.1940299,22.7238806 11.8843284,22.7238806 5.30223881,29.7761194 L5.2761194,29.8022388" id="XMLID_8_" stroke="#FFC952" stroke-width="2"></path>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>
