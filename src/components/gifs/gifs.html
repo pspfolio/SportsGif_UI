@@ -1,6 +1,6 @@
 <div class="gifs-container">
 	<ul class="gif-list">
-		<li class="fade-in" ng-repeat="gif in vm.gifs track by gif._id">
+		<li class="gif fade-in" ng-repeat="gif in vm.gifs track by gif._id">
 			<p class="gif-link" ng-click="vm.selectGif(gif)">
 				<span class="gif-link-added" ng-bind="gif.added"></span>
 				<span class="gif-link-title" ng-bind="gif.title"></span>
