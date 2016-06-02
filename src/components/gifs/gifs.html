@@ -3,12 +3,17 @@
 		<li class="gif fade-in" ng-repeat="gif in vm.gifs track by gif._id">
 			<div class="gif-link-wrapper" ng-click="vm.selectGif(gif)">
 				<span class="gif-link-title" ng-bind="gif.title"></span>
-				<span class="gif-link-added" ng-bind="gif.added"></span>
+				<div class="gif-link-added">
+					added <span ng-bind="gif.added"></span>
+				</div>
 			</div>
 			<div class="gif-views-container">
 				<span class="gif-views">355</span>
-				<span class="gif-views-text">views</span>
+				<div class="gif-views-text">
+					<span class="">views</span>
+				</div>
 			</div>
+			<div class="clear"></div>
 		</li>
 	</ul>
 	<button type="button" ng-click="vm.loadMore()">Load more</button>

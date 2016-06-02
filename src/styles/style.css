@@ -130,6 +130,41 @@ iframe {
 	width: 90%;
 	float: left;
 }
+
+.gif-link-title {
+	font-size: 1.7em;
+	color: #566270;
+}
+
+.gif-link-added {
+	font-size: .9em;
+	color: #BBB;
+	margin-top: 5px;
+}
+
+.gif-views-container {
+	float: right;
+}
+
+.gif-views {
+	font-weight: 300;
+	font-size: 1.7em;
+	color: #566270;
+}
+
+.gif-views-text {
+	color
+}
+
+.clear {
+	clear: both;
+}
+
+.clear:after {
+	content: '';
+	clear: both;
+}
+
 @media (max-width: 992px) {
 	.sidebar {
 		left: -240px;
