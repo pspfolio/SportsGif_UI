@@ -120,7 +120,16 @@ iframe {
 	list-style-type: none;
 }
 
+.gif-list .gif {
+	margin-top: 3em;
+	border-bottom: 1px solid #E1E1E1;
+	padding-bottom: 3em;
+}
 
+.gif-link-wrapper {
+	width: 90%;
+	float: left;
+}
 @media (max-width: 992px) {
 	.sidebar {
 		left: -240px;
