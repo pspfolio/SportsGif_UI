@@ -126,6 +126,10 @@ iframe {
 	padding-bottom: 3em;
 }
 
+.gif-list .gif:last-child {
+	border: none;
+}
+
 .gif-link-wrapper {
 	width: 90%;
 	float: left;
@@ -142,7 +146,24 @@ iframe {
 	margin-top: 5px;
 }
 
-.gif-views-container {
+.gif-info {
+	margin-left: 6em;
+	cursor: pointer;
+}
+
+.gif-play-button {
+	float: left;
+	height: 50px;
+	width: 50px;
+	border: 2px solid #FFC952;
+	border-radius: 50%;
+	background-image: url('../images/play.svg');
+	background-repeat: no-repeat;
+	background-position: center;
+	cursor: pointer;
+}
+
+.gif-views-wrapper {
 	float: right;
 }
 
@@ -153,7 +174,11 @@ iframe {
 }
 
 .gif-views-text {
-	color
+	color: #FF7473;
+}
+
+.load-more {
+	text-align: center;
 }
 
 .clear {
