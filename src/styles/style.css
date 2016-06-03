@@ -177,8 +177,18 @@ iframe {
 	color: #FF7473;
 }
 
+.load-more-button {
+	border-radius: 50px;
+	color: white;
+	background-color: #FF7473;
+	border: none;
+	padding: 15px 75px;
+	font-size: 1.3em;
+}
+
 .load-more {
 	text-align: center;
+	margin: 5em 0;
 }
 
 .clear {
