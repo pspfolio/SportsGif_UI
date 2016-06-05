@@ -1,0 +1,5 @@
+<ul class="filters">
+	<li ng-class="{ active: vm.isActive(filter) }" class="filter" ng-repeat="filter in vm.filters">
+		<span ng-bind="filter" ng-click="vm.selectFilter(filter)"></span>
+	</li>
+</ul>
