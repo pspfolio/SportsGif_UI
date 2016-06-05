@@ -6,6 +6,7 @@
 		var category = vm.category || $routeParams.subCategory;
 		
 		vm.selectGif = function(gif) {
+			GifFactory.updateView(gif._id);
 			vm.selectedGif = gif;
 		};
 		
