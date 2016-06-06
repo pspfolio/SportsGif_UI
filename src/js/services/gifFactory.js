@@ -9,7 +9,7 @@
 			var baseurl = API_GIFS_URL + subCategory;
 			var take = limit ? limit : 50;
 			var page = skip ? skip * take : 0;
-			var url = baseurl + '/' + take + '/' + page;
+			var url = baseurl + '/' + take + '/' + page + '/' + filter;
 
 			return $http.get(url).success(function (data) {
 				var gifs = InitData(data);
