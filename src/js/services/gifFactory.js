@@ -5,7 +5,6 @@
 		var GifFactory = {};
 		
 		GifFactory.getGifs = function (subCategory, limit, skip, filter) {
-			console.log(filter);
 			var baseurl = API_GIFS_URL + subCategory;
 			var take = limit ? limit : 50;
 			var page = skip ? skip * take : 0;

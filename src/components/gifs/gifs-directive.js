@@ -31,6 +31,7 @@
 		}
 		
 		function handleGifs(gifs) {
+			vm.showButton = gifs.data.length === vm.limit;
 			vm.gifs =  vm.gifs ? vm.gifs.concat(gifs.data) : gifs.data;
 		}
 	}
