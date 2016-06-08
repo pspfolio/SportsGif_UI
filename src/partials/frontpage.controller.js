@@ -5,9 +5,12 @@
 		.module('app')
 		.controller('frontpageCtrl', frontpageCtrl);
 	
-	function frontpageCtrl() {
+	function frontpageCtrl($rootScope) {
 		var vm = this;
 		vm.category = "nba";
-		vm.selectedGif = {};
+		vm.gifSelected = function(gif) {
+			$rootScope.$broadcast('playGif', gif);
+		}
+
 	}
 }());

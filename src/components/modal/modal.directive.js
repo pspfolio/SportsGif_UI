@@ -7,7 +7,7 @@
 		return {
 			restrict: 'E',
 			scope: {
-				gif: '='
+				modalClosed: '&'
 			},
 			templateUrl: 'src/components/modal/modal.html',
 			link: linkModal,
@@ -26,17 +26,24 @@
 			}
 		};
 		
-		scope.$watch(function() {return scope.gif}, function(value) {
-			scope.selectedGif = value;
+		
+		/*scope.$watch(function() {return scope.gif}, function(newValue, oldValue) {
+			console.log(newValue, oldValue);
+			scope.selectedGif = newValue;
 			scope.showModal(Object.keys(scope.gif) == 0, element);
+		}, true);*/
+		
+		scope.$on('playGif', function(event, data) {
+			scope.selectedGif = {url: ""};
+			scope.selectedGif = data;
+			scope.showModal(Object.keys(data) == 0, element);
 		});
 		
 		$(element).bind("hide.bs.modal", function () {
 			if (!scope.$$phase && !scope.$root.$$phase) {
 				// removing iframe player source -> not playing video when hidden
 				$(element[0].querySelector('.player')).attr('src', '');
-				scope.selectedGif = {};
-				scope.$apply();
+				scope.modalClosed();
 			}
 		});
 	}
