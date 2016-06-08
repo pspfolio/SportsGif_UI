@@ -7,7 +7,7 @@
 	
 	function frontpageCtrl() {
 		var vm = this;
-		vm.categoryNba = "nba";
+		vm.category = "nba";
 		vm.selectedGif = {};
 	}
 }());
