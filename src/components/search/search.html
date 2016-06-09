@@ -1,0 +1,11 @@
+
+<input class="search-gifs" 
+		type="search" 
+		placeholder="Search basketball gifs" 
+		onfocus="this.placeholder = ''" 
+		onblur="this.placeholder = 'Search basketball gifs'"
+		ng-model="vm.searchString"
+		ng-model-options="vm.modelOptions"
+		ng-change="vm.changed()"/>
+		
+	<p ng-bind="vm.searchString"></p>
