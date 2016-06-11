@@ -3,6 +3,12 @@
 	<section class="main-content">
 		<filters></filters>
 		<modal gif="vm.selectedGif" modal-closed="vm.gifModalClosed()"></modal>
-		<gifs category="vm.category" gif-selected="vm.gifSelected(gif)" limit="10"></gifs>
+		<gifs 
+			gifs="vm.gifs",
+			show-button="vm.showButton"
+			gif-selected="vm.gifSelected(gif)"
+			gif-load-more="vm.gifLoadMore()"
+			>
+		</gifs>
 	</section>
 </div>
