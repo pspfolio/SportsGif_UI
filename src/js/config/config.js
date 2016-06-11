@@ -4,9 +4,9 @@
 
 		$routeProvider
 			.when('/', {
-			templateUrl: 'src/partials/frontpage.html',
+			templateUrl: 'src/partials/mainpage.html',
 				controllerAs: 'vm',
-				controller: 'frontpageCtrl'
+				controller: 'mainpageCtrl'
 			})
 			.otherwise({ redirectTo: '/' });
 

@@ -3,7 +3,7 @@
 	
 	angular
 		.module('app')
-		.controller('frontpageCtrl', frontpageCtrl);
+		.controller('mainpageCtrl', frontpageCtrl);
 	
 	function frontpageCtrl($rootScope) {
 		var vm = this;
