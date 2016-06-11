@@ -25,6 +25,7 @@
 		}
 		
 		vm.gifSelected = function(gif) {
+			console.log(gif);
 			GifFactory.updateView(gif._id);
 			$rootScope.$broadcast('playGif', gif);
 		}
@@ -36,7 +37,9 @@
 		
 		// FILTERS
 		FilterFactory.filterChangedSubscribe($scope, handleFilterChanged);
+		
 		var filter = FilterFactory.getFilter();
+		
 		function handleFilterChanged() {
 			page = 0;
 			vm.gifs = [];

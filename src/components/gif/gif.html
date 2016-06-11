@@ -1,0 +1,15 @@
+<div class="gif-link-wrapper">
+	<div class="gif-play-button" ng-click="vm.selectGif(vm.gif)"></div>
+	<div class="gif-info" ng-click="vm.selectGif(vm.gif)">
+		<span class="gif-link-title" ng-bind="vm.gif.title"></span>
+		<div class="gif-link-added">
+			added <span ng-bind="vm.gif.added"></span>
+		</div>
+	</div>
+</div>
+<div class="gif-views-wrapper">
+	<span class="gif-views" ng-bind="vm.gif.views"></span>
+		<div class="gif-views-text">
+			<span>views</span>
+		</div>
+</div>
