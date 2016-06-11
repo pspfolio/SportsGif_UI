@@ -9,7 +9,6 @@
 
 		vm.selectGif = function(gif) {
 			GifFactory.updateView(gif._id);
-			//vm.selectedGif = gif;
 			vm.gifSelected({gif: gif});
 		};
 		
@@ -43,7 +42,6 @@
 			scope: {
 				category: '=',
 				limit: '=',
-				selectedGif: '=',
 				gifSelected: '&'
 			},
 			controller: gifsCtrl,
