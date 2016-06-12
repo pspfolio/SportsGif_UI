@@ -23,7 +23,7 @@
 		
 		vm.searchString = '';
 		
-		vm.changed = function() {
+		vm.changed = function() { 
 			vm.searchText({text: vm.searchString});
 		};
 		
