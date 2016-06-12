@@ -9,24 +9,28 @@
 		return {
 			restrict: 'E',
 			scope: {
+				searchText: '&'
 			},
 			templateUrl: 'src/components/search/search.html',
 			controller: searchCtrl,
-			controllerAs: 'vm'
-		}
-	};
+			controllerAs: 'vm',
+			bindToController: true
+		};
+	}
 	
 	function searchCtrl() {
 		var vm = this;
 		
 		vm.searchString = '';
+		
 		vm.changed = function() {
-			console.log("changed");
-		}
+			vm.searchText({text: vm.searchString});
+		};
+		
 		vm.modelOptions = {
 			debounce: {
 				default: 400
 			}
-		}
+		};
 	}
 }());

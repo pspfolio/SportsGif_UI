@@ -6,44 +6,56 @@
 		.controller('mainpageCtrl', mainpageCtrl);
 	
 	function mainpageCtrl($rootScope, $scope, GifFactory, FilterFactory) {
+		var vm = this;
 		var category = "nba";
 		var limit = 10;
-		var vm = this;
 		var page = 0;
+		var searchText = '';
 		var filter = FilterFactory.getFilter();
-				
-		// GIFS
 		
+		vm.gifSelected = gifSelected;
+		vm.gifLoadMore = gifLoadMore;
+		vm.gifSearchByText = gifSearchByText;
+		
+		// FILTERS
+		FilterFactory.filterChangedSubscribe($scope, handleFilterChanged);
+		function handleFilterChanged() {
+			page = 0;
+			emptyGifs();
+			filter = FilterFactory.getFilter();
+			getGifs();
+		}
+		
+		// GIFS
 		getGifs();
 		
 		function getGifs() {
-			GifFactory.getGifs(category, limit, page, filter).then(handleGifs);
+			GifFactory.getGifs(category, limit, page, filter, searchText).then(handleGifs);
 		}
 		
 		function handleGifs(gifs) {
 			vm.showButton = gifs.data.length === limit;
 			vm.gifs =  vm.gifs ? vm.gifs.concat(gifs.data) : gifs.data;
 		}
-		
-		vm.gifSelected = function(gif) {
-			console.log(gif);
+				
+		function gifSelected(gif) {
 			GifFactory.updateView(gif._id);
 			$rootScope.$broadcast('playGif', gif);
 		}
 		
-		vm.gifLoadMore = function() {
+		function gifSearchByText(text) {
+			emptyGifs();
+			searchText = text;
+			getGifs();
+		}
+		
+		function gifLoadMore() {
 			page++;
 			getGifs();
 		}
 		
-		// FILTERS
-		FilterFactory.filterChangedSubscribe($scope, handleFilterChanged);
-		
-		function handleFilterChanged() {
-			page = 0;
+		function emptyGifs() {
 			vm.gifs = [];
-			filter = FilterFactory.getFilter();
-			getGifs();
 		}
 	}
 }());

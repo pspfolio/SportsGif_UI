@@ -5,8 +5,8 @@
 		var GifFactory = {};
 		
 		// Getting gifs from API
-		GifFactory.getGifs = function (subCategory, limit, skip, filter) {
-			var url = buildUrl(API_GIFS_URL, subCategory, limit, skip, filter);
+		GifFactory.getGifs = function (subCategory, limit, skip, filter, searchText) {
+			var url = buildUrl(API_GIFS_URL, subCategory, limit, skip, filter, searchText);
 			
 			return $http.get(url).success(function (data) {
 				var gifs = InitData(data);
@@ -34,11 +34,11 @@
 	}
 	
 	// Building url based on parameters
-	function  buildUrl(apiUrl, subCategory, limit, skip, filter) {
+	function  buildUrl(apiUrl, subCategory, limit, skip, filter, searchText) {
 		var baseurl = apiUrl + subCategory;
 		var take = limit ? limit : 50;
 		var page = skip ? skip * take : 0;
-		var url = baseurl + '/' + take + '/' + page + '/' + filter;
+		var url = baseurl + '/' + take + '/' + page + '/' + filter + '/' + searchText;
 		return url;
 	}
 

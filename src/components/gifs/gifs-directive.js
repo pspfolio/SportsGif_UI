@@ -4,9 +4,8 @@
 		var vm = this;
 		
 		vm.selectGif = function(gif) {
-			console.log("gifss", gif);
 			vm.gifSelected({gif: gif});
-		}
+		};
 	}
 
 	function gifs() {
