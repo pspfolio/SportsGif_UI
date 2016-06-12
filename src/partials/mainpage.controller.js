@@ -10,6 +10,7 @@
 		var limit = 10;
 		var vm = this;
 		var page = 0;
+		var filter = FilterFactory.getFilter();
 				
 		// GIFS
 		
@@ -37,8 +38,6 @@
 		
 		// FILTERS
 		FilterFactory.filterChangedSubscribe($scope, handleFilterChanged);
-		
-		var filter = FilterFactory.getFilter();
 		
 		function handleFilterChanged() {
 			page = 0;
