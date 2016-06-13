@@ -16,6 +16,8 @@
 .fade-in {
 	animation: fade-in .4s ease-in;
 }
+
+
 /*
 	STYLES
 */
@@ -62,13 +64,15 @@ iframe {
 }
 
 .search-gifs {
-	margin-top: 3em;
+	margin-top: 1.8em;
 	width: 50%;
 	height: 44px;
 	text-align: center;
 	color: white;
 	background-color: #FFD373;
 	border: none;
+	font-size: 1.2em;
+	letter-spacing: .04em;
 }
 
 .search-gifs::-webkit-input-placeholder {
@@ -161,6 +165,12 @@ iframe {
 	background-repeat: no-repeat;
 	background-position: center;
 	cursor: pointer;
+	transition: all .3s ease-in;
+}
+
+.gif-play-button:hover {
+	height: 54px;
+	width: 54px;
 }
 
 .gif-views-wrapper {
@@ -225,11 +235,23 @@ iframe {
 	.showMenu {
 		left: 0;
 	}
+	
+	.gif-play-button {
+		display: none;
+	}
+	
+	.gif-info {
+		margin-left: 0;
+	}
 }
 
 @media (max-width: 768px) {
 	.nav-container {
 		clear: both;
+	}
+	
+	.gif-link-wrapper {
+		width: 80%;
 	}
 	
 	.search-gifs {
